@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: Foxite/trigger-update@v0.1.2
+        uses: Foxite/trigger-update@v0.1.3
         with:
           who-to-greet: 'World'
           images: heyoo,hayaa
