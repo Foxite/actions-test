@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: Foxite/trigger-update@v0.1.1
+        with:
+          who-to-greet: 'World'
+          images: heyoo,hayaa
