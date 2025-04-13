@@ -12,7 +12,7 @@ jobs:
         with:
           images: "testimage,testimage2"
           # When you use this in production, these values MUST be in secrets.
-          callUrl: "https://4093-2a02-a447-765f-00-169b.ngrok-free.app"
+          glueUrl: "https://4093-2a02-a447-765f-00-169b.ngrok-free.app"
           privateKey: "-----BEGIN PRIVATE KEY-----\nME4CAQAwEAYHKoZIzj0CAQYFK4EEACIENzA1AgEBBDBMw9yCwBqMMpuNMmyQsYQj\nsk7/6aUMzhZl8E64E8vduWvhqA+S3ErqkojPmfrmbYg=\n-----END PRIVATE KEY-----"
           keyId: "sig-1744467848"
           algorithm: "ES384"
