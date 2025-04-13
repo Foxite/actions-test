@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Trigger update
         id: trigger-update
-        uses: Foxite/trigger-update@v0.2.2
+        uses: Foxite/trigger-update@v0.2.3
         with:
           images: "testimage,testimage2"
           # When you use this in production, these values MUST be in secrets.
