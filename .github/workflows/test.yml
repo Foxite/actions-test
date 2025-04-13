@@ -1,12 +1,18 @@
-on: [push]
+on:
+  - push
 
 jobs:
-  hello_world_job:
+  trigger-update:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Trigger update test
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: Foxite/trigger-update@v0.1.3
+      - name: Trigger update
+        id: trigger-update
+        uses: Foxite/trigger-update@v0.2
         with:
-          images2: heyoo,hayaa
+          images: "testimage,testimage2"
+          # When you use this in production, these values MUST be in secrets.
+          callUrl: "https://4a9d-2a02-a447-765f-00-169b.ngrok-free.app"
+          privateKey: "-----BEGIN PRIVATE KEY-----\nME4CAQAwEAYHKoZIzj0CAQYFK4EEACIENzA1AgEBBDBMw9yCwBqMMpuNMmyQsYQj\nsk7/6aUMzhZl8E64E8vduWvhqA+S3ErqkojPmfrmbYg=\n-----END PRIVATE KEY-----"
+          keyId: "sig-1744467848"
+          algorithm: "ES384"
